@@ -1,5 +1,9 @@
-Title: Homebaby
+Title: Index
 
 ----
 
-Text: 
+H1: Yonghee Kim is a Canada-based graphic designer
+
+----
+
+Text: working with continuous innate interests in aesthetic exploration by considering his activity as an extended Metabolic development. Focused mainly on conceptualizing, system creation, and visual/typographic research. Feel free to contact.
