@@ -15,7 +15,8 @@
 <body>
 
     <?= snippet ('header') ?>
-    <?= snippet ('metalist') ?>
+    <?= snippet ('project-left') ?>
+    <?= snippet ('project-right') ?>
     <?= snippet ('scripts') ?>
 
 </body>

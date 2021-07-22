@@ -1,0 +1,12 @@
+type: pages
+headline: Project Right
+size: small
+info: "{{ page.images.count }} image(s)"
+layout: list
+template: project-right
+empty: No albums yet
+status: listed
+image:
+  # query: page.cover
+  cover: true
+  ratio: 16/9

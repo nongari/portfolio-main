@@ -1,0 +1,26 @@
+title: Project (Left)
+
+options:
+  pages: false
+  changeTemplate:
+    - project-left
+    - project-right
+
+columns:
+  - width: 1/2
+    sections:
+      content:
+        type: fields
+        fields:
+          text:
+            label: Description
+            type: textarea
+            size: small
+
+  - width: 1/2
+    sections:
+      images:
+        type: files
+        layout: cards
+        info: "{{ file.dimensions }}"
+        min: 1

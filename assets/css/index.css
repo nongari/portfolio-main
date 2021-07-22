@@ -11,6 +11,12 @@ h1 {
   margin: 0;
 }
 
+.h1 {
+  font-size: 3rem;
+}
+
+/* Grid */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -38,6 +44,8 @@ h1 {
   grid-row: span 1;
 }
 
+/* Button */
+
 button {
   border: none;
   background-color: transparent;
@@ -45,57 +53,59 @@ button {
   transition-duration: 0.5s;
 }
 
-button:hover {
-  color: #ecfffe;
-  -webkit-box-shadow: 0 0 1rem #c9fffc;
-  box-shadow: 0 0 1rem #c9fffc;
-}
-
-svg {
+button svg {
   fill: #0a0a0a;
 }
 
-svg:hover {
+button svg :hover {
   fill: #ecfffe;
   -webkit-filter: drop-shadow(0 0 1rem #55fff7c);
   filter: drop-shadow(0 0 1rem #55fff7);
 }
 
-.capsule {
+/* Collapse */
+
+.capsule button {
   width: fit-content;
   height: fit-content;
-  cursor: pointer;
-  align-self: center;
-  justify-self: end;
 }
 
-.info {
+.capsule {
+  cursor: pointer;
+  justify-self: end;
+  align-self: center;
+  color: #444;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active,
+.capsule:hover {
+  background-color: none;
+}
+
+.panel {
   position: relative;
   grid-column: span 6;
   grid-row: span 2;
 
-  float: left;
-  width: 100%;
+  max-height: 0;
   overflow: hidden;
-  height: 0;
-  transition: height 1000ms;
-  font-size: 3rem;
-}
-.info.open {
-  height: 12rem;
+
+  transition: max-height 0.5s ease-out;
 }
 
 .info-button {
   width: 2rem;
+  cursor: pointer;
 }
 
-.demo {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+/* Sortable */
+
+.metalist {
+  padding-top: 1rem;
 }
 
 .list-group-item {
@@ -105,4 +115,9 @@ svg:hover {
   margin-bottom: -1px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+i {
+  cursor: move;
+  padding-right: 1rem;
 }

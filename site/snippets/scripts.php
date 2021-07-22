@@ -12,7 +12,6 @@
         group: 'list',
         animation: 500,
         ghostClass: 'ghost',
-        handle: '.handle',
         onSort: reportActivity,
     });
 
@@ -37,3 +36,19 @@
         console.log('The sort order has changed');
     };
   </script>
+  <script>
+var acc = document.getElementsByClassName("capsule");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
