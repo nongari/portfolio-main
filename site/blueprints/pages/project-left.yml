@@ -19,7 +19,7 @@ columns:
 
   - width: 1/2
     sections:
-      images:
+      projectimages:
         type: files
         layout: cards
         info: "{{ file.dimensions }}"

@@ -1,8 +1,8 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src="assets\js\scripts.js"></script>
-
+<script src="assets\js\jquery.js"></script>
 <script src="https://unpkg.com/sortablejs-make/Sortable.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <script>
     //Metalist
@@ -10,7 +10,7 @@
     // List 1
     $('#items-1').sortable({
         group: 'list',
-        animation: 500,
+        animation: 250,
         ghostClass: 'ghost',
         onSort: reportActivity,
     });
@@ -18,7 +18,7 @@
     // List 2
     $('#items-2').sortable({
         group: 'list',
-        animation: 500,
+        animation: 250,
         ghostClass: 'ghost',
         onSort: reportActivity,
     });
@@ -36,19 +36,76 @@
         console.log('The sort order has changed');
     };
   </script>
-  <script>
-var acc = document.getElementsByClassName("capsule");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
+<!-- Capsules -->
+
+<script>
+  var acc = document.getElementsByClassName("capsule");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("open");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        
+      } 
+    });
+  }
+</script>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+
+  // document.getElementById('collapse-all').addEventListener('click', function(e) {
+  //   for (i = 0; i < acc.length; i++) {
+  //     acc[i].classList.add('active');
+  //     var panel = acc[i].nextElementSibling;
+  //     panel.style.maxHeight = panel.scrollHeight + "px";
+  //   }
+  // });
+
+  document.getElementById('close-all').addEventListener('click', function(e) {
+    for (i = 0; i < acc.length; i++) {
+      acc[i].classList.remove('active');
+      var panel = acc[i].nextElementSibling;
       panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
+    }
   });
-}
+</script>
+
+
+
+<!-- Swiper Options -->
+
+<script>
+      var swiper = new Swiper(".mySwiper", {
+        setWrapperSize: true,
+        effect: 'fade',
+          fadeEffect: {
+            crossFade: true
+          },
+        slidesPerView: 1,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
 </script>

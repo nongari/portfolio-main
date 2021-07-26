@@ -9,7 +9,7 @@ columns:
         fields:
           h1:
             label: H1
-            type: text
+            type: textarea
           text:
             label: Info
             type: textarea

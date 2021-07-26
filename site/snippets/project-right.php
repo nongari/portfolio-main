@@ -1,20 +1,45 @@
     
-        <div id="items-2" class="col-3">
+        <div id="items-2" class="col-4">
 
             <?php foreach ($site->children()->template('project-right') as $project): ?>
+            
+            <div id="<?= $project->title() ?>" class="list-group-item nested-1">
+                <div class="accordion light">
 
-            <div id="<?= $project->title() ?>" class="list-group-item nested-1 capsule">
-                <i class="handle">
-                    <?= asset('assets\images\handle.svg')->read() ?>
-                </i>
-                <?= $project->title() ?>
+                    <div class="element">
+
+                        <i class="handle">
+                            <?= asset('assets\images\handle.svg')->read() ?>
+                        </i>
+                        <h2><?= $project->title() ?></h2>
+
+                    </div>
+                </div>
+                
+                <div class="panel">
+                    <div class="description"><?= $project->text()->toBlocks() ?></div>
+
+                    <div class="swiper-container mySwiper">
+
+                        <div class="swiper-wrapper">
+
+                            <?php foreach($project->images() as $projectimages): ?>
+
+                                <div class="swiper-slide">
+                                    <img src="<?= $projectimages->url() ?>" >
+                                </div>
+
+                            <?php endforeach ?> 
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="panel">
-                <p><?= $project->text()->toBlocks() ?></p>
-            </div>
 
-            <?php endforeach ?>
+        <?php endforeach ?>
             
         </div>
 </div>

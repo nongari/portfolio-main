@@ -2,8 +2,11 @@ Title: Info
 
 ----
 
-H1: Yonghee Kim is a Canada-based graphic designer
+H1: Yonghee Kim is a graphic designer based in Canada
 
 ----
 
-Text: working with continuous innate interests in aesthetic exploration by considering his activity as an extended Metabolic development. Focused mainly on conceptualizing, system creation, and visual/typographic research. Feel free to contact.
+Text:
+
+working with innate interests in aesthetic exploration by considering his activity as an extended <a href="https://monoskop.org/File:Kurokawa_Kisho_Metabolism_in_Architecture_1977.pdf" target="_blank">metabolic🡥</a> development. Focused mainly on conceptualizing, system creation, and visual/typographic research.
+Feel free to contact.
