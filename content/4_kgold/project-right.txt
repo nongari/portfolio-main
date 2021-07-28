@@ -1,0 +1,29 @@
+Title:
+
+K⋅GOLD, 2020
+
+----
+
+Text:
+
+Logotype, art direction, website design and development for jewelry retailer K⋅GOLD.
+
+----
+
+Videon: true
+
+----
+
+Video:
+
+- 
+  video:
+    - kgold-website.mov
+
+----
+
+Multi: true
+
+----
+
+Single: false

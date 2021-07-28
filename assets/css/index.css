@@ -20,7 +20,7 @@
   --padding: 1.5rem;
   --color-black: #000;
   --color-white: #fff;
-  --color-grey: #ccc;
+  --color-grey: #eaeaea;
   --color-darkgrey: #1c1f21;
   --color-light: #c6fbff;
 
@@ -48,7 +48,8 @@ body {
 
   font-family: "Matang";
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: -0.05em;
 }
 
 svg {
@@ -56,7 +57,7 @@ svg {
 }
 
 nav {
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 a {
@@ -66,9 +67,9 @@ a {
 
 h1,
 .h1 {
+  font-family: "Matang";
   font-weight: 500;
-  font-size: 2.7rem;
-  line-height: 100%;
+  font-size: 2.2rem;
   letter-spacing: -0.07em;
 
   margin: 0;
@@ -215,28 +216,33 @@ a:hover {
 
 @keyframes dimming {
   0% {
-    text-shadow: 0.25rem 0.25rem 0.5rem rgba(21, 199, 255, 0.65),
-      -0.25rem -0.25rem 0.55rem rgba(21, 199, 255, 0.65);
+    text-shadow: 0.25rem 0.25rem 0.6rem rgba(21, 199, 255, 0.65),
+      -0.25rem -0.25rem 0.6rem rgba(21, 199, 255, 0.65);
   }
 
   100% {
-    text-shadow: -0.25rem 0.25rem 0.5rem rgba(21, 199, 255, 0.65),
-      0.25rem -0.25rem 0.55rem rgba(21, 199, 255, 0.65);
+    text-shadow: -0.25rem 0.25rem 0.6rem rgba(21, 199, 255, 0.65),
+      0.25rem -0.25rem 0.6rem rgba(21, 199, 255, 0.65);
   }
 }
 
-#close-all {
+#control {
   position: fixed;
+  display: flex;
   bottom: 1rem;
   z-index: 999;
+  right: 1rem;
+}
 
+#expand-all,
+#close-all {
   border: none;
 }
 
 /* Info Capsule */
 .intro {
   position: relative;
-  grid-column: span 5;
+  grid-column: span 4;
   grid-row: span 1;
 }
 
@@ -247,7 +253,7 @@ a:hover {
 
 .capsule {
   display: flex;
-  justify-self: baseline;
+  justify-self: end;
   align-self: center;
   transition: 0.4s;
 }
@@ -281,7 +287,7 @@ a:hover {
   border: none;
   text-align: left;
   outline: none;
-  padding: 1.2rem 0;
+  padding: 1.8rem 0;
 }
 
 .handle {
@@ -303,7 +309,7 @@ a:hover {
 .active,
 .accordion:hover {
   background-color: var(--color-accordionbg);
-  color: var(--color-light);
+  color: var(--color-white);
 }
 
 .accordion:after {
@@ -318,8 +324,16 @@ a:hover {
   transition: max-height 0.4s ease-out;
 }
 
+.panel-container {
+  padding-bottom: 2rem;
+}
+
 .description {
   padding: 1.5rem 1rem;
+}
+
+.single {
+  width: 100%;
 }
 
 .
@@ -493,7 +507,7 @@ a:hover {
   height: 100%;
   /* margin-top: calc(0px - (var(--swiper-navigation-size) / 2)); */
   z-index: 10;
-  cursor: col-resize;
+  cursor: ew-resize;
   /* display: flex; */
   align-items: center;
   justify-content: center;

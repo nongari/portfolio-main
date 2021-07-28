@@ -1,0 +1,21 @@
+Title: Psygen, 2020
+
+----
+
+Text: Brand identity for psychedelic drug manufacturer Psygen.
+
+----
+
+Videon: false
+
+----
+
+Video: 
+
+----
+
+Multi: true
+
+----
+
+Single: false

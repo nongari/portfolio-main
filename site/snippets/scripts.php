@@ -73,13 +73,13 @@
     });
   }
 
-  // document.getElementById('collapse-all').addEventListener('click', function(e) {
-  //   for (i = 0; i < acc.length; i++) {
-  //     acc[i].classList.add('active');
-  //     var panel = acc[i].nextElementSibling;
-  //     panel.style.maxHeight = panel.scrollHeight + "px";
-  //   }
-  // });
+  document.getElementById('expand-all').addEventListener('click', function(e) {
+    for (i = 0; i < acc.length; i++) {
+      acc[i].classList.add('active');
+      var panel = acc[i].nextElementSibling;
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
 
   document.getElementById('close-all').addEventListener('click', function(e) {
     for (i = 0; i < acc.length; i++) {
@@ -97,6 +97,7 @@
 <script>
       var swiper = new Swiper(".mySwiper", {
         setWrapperSize: true,
+        autoHeight: true,
         effect: 'fade',
           fadeEffect: {
             crossFade: true

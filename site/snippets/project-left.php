@@ -20,22 +20,48 @@
                 </div>
                 
                 <div class="panel">
-                    <div class="description"><?= $project->text()->toBlocks() ?></div>
+                    
+                    <div class="panel-container">
+                        <div class="description"><?= $project->text()->toBlocks() ?></div>
 
-                    <div class="swiper-container mySwiper">
+                        <?php if ($project->multi()->toBool()): ?>
 
-                        <div class="swiper-wrapper">
+                        <div class="swiper-container mySwiper">
+
+                            <div class="swiper-wrapper">
+
+                                <?php foreach($project->images() as $projectimages): ?>
+
+                                    <div class="swiper-slide">
+                                        <img src="<?= $projectimages->url() ?>" >
+                                    </div>
+
+                                <?php endforeach ?> 
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+                        <?php endif ?>    
+                        
+                        <?php if ($project->single()->toBool()): ?>
 
                             <?php foreach($project->images() as $projectimages): ?>
+                                <img class="single" src="<?= $projectimages->url() ?>" >
+                            <?php endforeach ?>
+                            
+                        <?php endif ?>
 
-                                <div class="swiper-slide">
-                                    <img src="<?= $projectimages->url() ?>" >
-                                </div>
+                        <?php if ($project->videon()->toBool()): ?>
 
-                            <?php endforeach ?> 
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                            <?php foreach($project->videos() as $videos): ?>
+                                <video class="single" autoplay loop muted>
+                                    <source src="<?= $videos->url() ?>">
+                                </video>
+                            <?php endforeach ?>
+                            
+                        <?php endif ?>
+
                     </div>
                 </div>
 

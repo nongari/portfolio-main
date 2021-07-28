@@ -1,0 +1,17 @@
+Title: Numinus, 2020
+
+----
+
+Text: Visual identity and art direction for psychedelic-based medicine practitioner Numinus.
+
+----
+
+Multi: true
+
+----
+
+Single: false
+
+----
+
+Imagecount: true

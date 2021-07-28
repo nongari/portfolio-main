@@ -1,0 +1,21 @@
+Title: NYB Gallery, 2019
+
+----
+
+Text: Visual identity, brand typeface, exhibition materials and invitation design for NYB Gallery in Kirkland, WA.
+
+----
+
+Multi: true
+
+----
+
+Single: false
+
+----
+
+Videon: true
+
+----
+
+Cover: 

@@ -19,9 +19,9 @@
     
     
 </nav>
-
-<!-- <button id="collapse-all">Collapse all</button> -->
-    <button id="close-all" class="light h2">Collapse All</button>
-    
+    <div id="control">
+        <button id="expand-all" class="light h2">Expand All</button>
+        <button id="close-all" class="light h2">Collapse All</button>
+    </div>
 
 
