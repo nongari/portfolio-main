@@ -1,0 +1,21 @@
+Title: Tryp Therapeutics, 2020
+
+----
+
+Text: Logotype design for pharmaceutical company Tryp Therapeutics.
+
+----
+
+Videon: false
+
+----
+
+Video: 
+
+----
+
+Multi: false
+
+----
+
+Single: true

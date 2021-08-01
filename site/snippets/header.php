@@ -1,4 +1,4 @@
-<nav class="grid">
+<nav class="grid" id="header">
     <h1 class="intro"><?= $page->h1() ?></h1>
     <div class="capsule">
         <div>
@@ -12,7 +12,7 @@
             /
             <a href="https://www.instagram.com/yong_hee___kim" target="_blank">Instagram</a>
             /
-            <a href="https://www.instagram.com/yong_hee___kim" target="_blank">Tumblr</a>
+            <a href="https://www.are.na/yonghee-kim" target="_blank">Are.na</a>
         </div>
     </div>
     

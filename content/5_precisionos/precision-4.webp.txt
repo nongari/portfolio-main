@@ -1,5 +1,0 @@
-Template: images
-
-----
-
-Sort: 5

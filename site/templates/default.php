@@ -8,9 +8,6 @@
         <title>Yonghee Kim</title>
 
         <?= css('\assets\css\index.css') ?>
-        <?= css('\assets\css\slick-theme.css') ?>
-        
-        
 
 
     </head>

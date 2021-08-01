@@ -1,8 +1,8 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src="assets\js\jquery.js"></script>
 <script src="https://unpkg.com/sortablejs-make/Sortable.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
   <script>
     //Metalist
@@ -96,6 +96,16 @@
 
 <script>
       var swiper = new Swiper(".mySwiper", {
+        
+        lazy: {
+        //  tell swiper to load images before they appear
+        loadPrevNext: true,
+        // amount of images to load
+      	loadPrevNextAmount: 2,
+        checkInView: true,
+        },
+
+        
         setWrapperSize: true,
         autoHeight: true,
         effect: 'fade',

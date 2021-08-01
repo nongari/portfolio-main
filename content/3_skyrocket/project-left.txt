@@ -1,0 +1,28 @@
+Title: Skyrocket, 2020
+
+----
+
+Text:
+
+Visual identity and art direction for Vancouver-based digital agency Skyrocket.
+Collaborated with <a href="http://yunghui.com" target="_blank">Yung Hui 🡥</a>.
+
+----
+
+Videon: false
+
+----
+
+Video: 
+
+----
+
+Multi: true
+
+----
+
+Single: false
+
+----
+
+Imagecount: true

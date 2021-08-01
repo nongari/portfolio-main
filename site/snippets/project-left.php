@@ -22,7 +22,7 @@
                 <div class="panel">
                     
                     <div class="panel-container">
-                        <div class="description"><?= $project->text()->toBlocks() ?></div>
+                        
 
                         <?php if ($project->multi()->toBool()): ?>
 
@@ -33,7 +33,10 @@
                                 <?php foreach($project->images() as $projectimages): ?>
 
                                     <div class="swiper-slide">
-                                        <img src="<?= $projectimages->url() ?>" >
+                                        <figure>
+                                            <img data-src="<?= $projectimages->url() ?>"  class="swiper-lazy" >
+                                        </figure>
+                                        
                                     </div>
 
                                 <?php endforeach ?> 
@@ -61,6 +64,8 @@
                             <?php endforeach ?>
                             
                         <?php endif ?>
+
+                        <div class="description"><?= $project->text()->toBlocks() ?></div>
 
                     </div>
                 </div>

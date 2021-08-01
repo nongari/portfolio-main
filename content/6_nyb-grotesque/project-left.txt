@@ -1,0 +1,21 @@
+Title: NYB Grotesque, 2019
+
+----
+
+Text: Brand typeface for NYB GALLERY.
+
+----
+
+Videon: false
+
+----
+
+Video: 
+
+----
+
+Multi: true
+
+----
+
+Single: false

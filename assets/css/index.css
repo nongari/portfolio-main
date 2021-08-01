@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Matang";
+  font-family: "BT";
   src: url("../fonts/serif.woff") format("woff");
   font-style: normal;
 }
@@ -20,15 +20,15 @@
   --padding: 1.5rem;
   --color-black: #000;
   --color-white: #fff;
-  --color-grey: #eaeaea;
-  --color-darkgrey: #1c1f21;
+  --color-grey: #eaebee;
+  --color-darkgrey: #0f1113;
   --color-light: #c6fbff;
 
-  --color-text: var(--color-black);
+  --color-text: var(--color-darkgrey);
   --color-text-light: var(--color-light);
   --color-background: var(--color-grey);
-  --color-accordionbg: var(--color-black);
-  --color-svg: var(--color-black);
+  --color-accordionbg: var(--color-darkgrey);
+  --color-svg: var(--color-darkgrey);
 }
 
 ::selection {
@@ -43,13 +43,12 @@ html {
 }
 
 body {
-  margin: 1rem 1.5rem;
+  margin: 1rem 4rem 6rem;
   background-color: var(--color-background);
 
-  font-family: "Matang";
+  font-family: "BT";
   font-weight: 500;
-  font-size: 1.1rem;
-  letter-spacing: -0.05em;
+  font-size: 1rem;
 }
 
 svg {
@@ -67,10 +66,14 @@ a {
 
 h1,
 .h1 {
-  font-family: "Matang";
+  font-family: "BT";
   font-weight: 500;
-  font-size: 2.2rem;
-  letter-spacing: -0.07em;
+  font-size: 2.6rem;
+  line-height: 105%;
+  -webkit-transform: scaleX(0.85);
+  transform: scaleX(0.85);
+  transform-origin: left;
+  letter-spacing: -0.06em;
 
   margin: 0;
 }
@@ -78,7 +81,7 @@ h1,
 h2,
 .h2 {
   font-family: "TeX";
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: -0.02em;
@@ -86,12 +89,18 @@ h2,
   margin: 0;
 }
 
+p {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 figure {
   margin: 0;
 }
 
-p {
-  margin: 0;
+.link-arrow {
+  font-size: 2rem;
 }
 
 /* Scrollbar styles */
@@ -116,9 +125,10 @@ p {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  column-gap: 1.5rem;
+  column-gap: 4rem;
   grid-auto-flow: dense;
   box-sizing: border-box;
+  max-width: 2560px;
 }
 
 .col-2 {
@@ -231,7 +241,6 @@ a:hover {
   display: flex;
   bottom: 1rem;
   z-index: 999;
-  right: 1rem;
 }
 
 #expand-all,
@@ -242,7 +251,7 @@ a:hover {
 /* Info Capsule */
 .intro {
   position: relative;
-  grid-column: span 4;
+  grid-column: span 5;
   grid-row: span 1;
 }
 
@@ -253,7 +262,6 @@ a:hover {
 
 .capsule {
   display: flex;
-  justify-self: end;
   align-self: center;
   transition: 0.4s;
 }
@@ -264,7 +272,7 @@ a:hover {
 
 .top-panel {
   position: relative;
-  grid-column: span 5;
+  grid-column: span 6;
   grid-row: span 2;
   max-height: 0;
   transition: max-height 0.5s ease-out;
@@ -274,7 +282,7 @@ a:hover {
   padding-top: 1rem;
 
   font-family: "TeX";
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -287,7 +295,7 @@ a:hover {
   border: none;
   text-align: left;
   outline: none;
-  padding: 1.8rem 0;
+  padding: 1.5rem 0;
 }
 
 .handle {
@@ -325,11 +333,11 @@ a:hover {
 }
 
 .panel-container {
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 .description {
-  padding: 1.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .single {
@@ -507,7 +515,7 @@ a:hover {
   height: 100%;
   /* margin-top: calc(0px - (var(--swiper-navigation-size) / 2)); */
   z-index: 10;
-  cursor: ew-resize;
+  cursor: col-resize;
   /* display: flex; */
   align-items: center;
   justify-content: center;
@@ -936,11 +944,24 @@ button.swiper-pagination-bullet {
   .top-panel {
     grid-column: span 7;
   }
+
+  .panel-container {
+    padding-bottom: 2rem;
+  }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1280px) {
   body {
-    margin: 1rem 1rem;
+    margin: 1rem 2rem 4rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: inherit;
+  }
+
+  .intro {
+    grid-column: inherit;
   }
 
   h1,
@@ -951,10 +972,6 @@ button.swiper-pagination-bullet {
   h2,
   .h2 {
     font-size: 1.2rem;
-  }
-
-  .grid {
-    column-gap: 0.8rem;
   }
 
   .top-panel {
@@ -969,5 +986,56 @@ button.swiper-pagination-bullet {
   .col-5,
   .col-6 {
     grid-column: span 8;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 1rem 0.8rem 4rem;
+  }
+
+  h1,
+  .h1 {
+    font-size: 1.8rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 1rem;
+  }
+
+  #control {
+    right: 1rem;
+  }
+
+  .panel-container {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  #header {
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  h1,
+  .h1 {
+    font-size: 1.3rem;
+  }
+
+  body {
+    margin: 1rem 0 3.5rem;
+  }
+
+  .arrow {
+    width: 60%;
+  }
+
+  .link-arrow {
+    font-size: 1rem;
   }
 }
