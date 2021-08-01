@@ -6,15 +6,19 @@ Text: Visual identity, brand typeface, exhibition materials and invitation desig
 
 ----
 
+Videon: true
+
+----
+
+Video: 
+
+----
+
 Multi: true
 
 ----
 
 Single: false
-
-----
-
-Videon: true
 
 ----
 
