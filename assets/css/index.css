@@ -254,7 +254,7 @@ a,
 #control {
   position: fixed;
   display: flex;
-  bottom: 1rem;
+  bottom: 1.5rem;
   z-index: 999;
 }
 
@@ -992,8 +992,7 @@ button.swiper-pagination-bullet {
   body {
     margin: 1rem 0 3.5rem;
 
-    font-size: 0.9rem;
-    letter-spacing: ;
+    font-size: 0.7rem;
   }
 
   #header {
@@ -1003,6 +1002,11 @@ button.swiper-pagination-bullet {
   h1,
   .h1 {
     font-size: 1.2rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 0.85rem;
   }
 
   p {

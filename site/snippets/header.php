@@ -2,7 +2,7 @@
     <h1 class="intro"><?= $page->h1() ?></h1>
     <div class="capsule">
         <div>
-            <?= asset('assets\images\triangle-a.svg')->read() ?>
+            <img class="arrow" src="assets\images\triangle-a.svg" alt="">
         </div>
     </div>
     <div class="panel top-panel">
@@ -10,7 +10,7 @@
         <div class="social">
             <a href="mailto: yong@yong-heekim.com">Email</a>
             /
-            <a href="https://www.instagram.com/yong_hee___kim" target="_blank">Instagram</a>
+            <a href="https://www.instagram.com/yonghee____kim" target="_blank">Instagram</a>
             /
             <a href="https://www.are.na/yonghee-kim" target="_blank">Are.na</a>
         </div>
@@ -20,7 +20,7 @@
     
 </nav>
     <div id="control">
-        <button id="expand-all" class="light h2">Expand All</button>
+        <!-- <button id="expand-all" class="light h2">Expand All</button> -->
         <button id="close-all" class="light h2">Collapse All</button>
     </div>
 
