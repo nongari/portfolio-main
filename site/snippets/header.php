@@ -21,7 +21,7 @@
 </nav>
     <div id="control">
         <!-- <button id="expand-all" class="light h2">Expand All</button> -->
-        <button id="close-all" class="light h2">Collapse All</button>
+        <button id="close-all" class="light h2">Close All</button>
     </div>
 
 

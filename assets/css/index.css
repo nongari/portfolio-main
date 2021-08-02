@@ -58,8 +58,6 @@ body {
   background-color: var(--color-background);
 
   font-family: "BT";
-  font-weight: 500;
-  font-size: 1rem;
 }
 
 svg {
@@ -102,8 +100,10 @@ h2,
 
 p {
   margin: 0;
-  font-weight: 500;
-  letter-spacing: -0.02em;
+
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
 }
 
 figure {
@@ -136,7 +136,7 @@ figure {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  column-gap: 4rem;
+  column-gap: 3rem;
   grid-auto-flow: dense;
   box-sizing: border-box;
   max-width: 2560px;
@@ -310,7 +310,7 @@ a,
   border: none;
   text-align: left;
   outline: none;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0;
 }
 
 .handle {
@@ -924,6 +924,7 @@ button.swiper-pagination-bullet {
 @media only screen and (max-width: 1280px) {
   body {
     margin: 1rem 1rem 4rem;
+    font-size: ;
   }
 
   .grid {
@@ -937,12 +938,16 @@ button.swiper-pagination-bullet {
 
   h1,
   .h1 {
-    font-size: 2rem;
+    font-size: 1.55rem;
   }
 
   h2,
   .h2 {
     font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.875rem;
   }
 
   .top-panel {
@@ -973,6 +978,10 @@ button.swiper-pagination-bullet {
   h2,
   .h2 {
     font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
   }
 
   .social {
@@ -1006,11 +1015,7 @@ button.swiper-pagination-bullet {
 
   h2,
   .h2 {
-    font-size: 0.85rem;
-  }
-
-  p {
-    letter-spacing: -0.04em;
+    font-size: 0.95rem;
   }
 
   .social {
