@@ -36,6 +36,17 @@
   background: var(--color-black);
 }
 
+input,
+textarea,
+button,
+select,
+div,
+a,
+div:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: 0;
+}
+
 html {
   font-size: 16px;
   cursor: crosshair;
@@ -68,7 +79,7 @@ h1,
 .h1 {
   font-family: "BT";
   font-weight: 500;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   line-height: 105%;
   -webkit-transform: scaleX(0.85);
   transform: scaleX(0.85);
@@ -91,7 +102,7 @@ h2,
 
 p {
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.02em;
 }
 
@@ -99,25 +110,25 @@ figure {
   margin: 0;
 }
 
-.link-arrow {
-  font-size: 2rem;
+:focus-visible {
+  outline: none !important;
 }
 
 /* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
-  opacity: 0.6;
+  opacity: 0;
 }
 
 ::-webkit-scrollbar-track {
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
+  border: 0 solid #e6e6e600;
+  border-radius: 0;
 }
-
+/* 
 ::-webkit-scrollbar-thumb {
-  background: #000000cc;
-}
+  background: #00000000;
+} */
 
 /* Grid */
 
@@ -172,12 +183,14 @@ button {
   background-color: transparent;
 }
 
-.arrow:hover {
-  filter: blur(2px);
-}
+@media (hover: hover) and (pointer: fine) {
+  .arrow:hover {
+    filter: blur(2px);
+  }
 
-.arrow:hover {
-  animation: blinking 0.1s infinite;
+  .arrow:hover {
+    animation: blinking 0.1s infinite;
+  }
 }
 
 @keyframes blinking {
@@ -208,20 +221,22 @@ a,
   background-color: transparent;
 }
 
-.light:hover .element {
-  color: var(--color-white);
+@media (hover: hover) and (pointer: fine) {
+  .light:hover .element {
+    color: var(--color-white);
 
-  filter: blur(0.05rem);
-  animation: dimming 0.1s infinite;
-}
+    filter: blur(0.05rem);
+    animation: dimming 0.1s infinite;
+  }
 
-button.light:hover,
-a:hover {
-  color: var(--color-white);
-  background-color: var(--color-black);
+  button.light:hover,
+  a:hover {
+    color: var(--color-white);
+    background-color: var(--color-black);
 
-  filter: blur(0.05rem);
-  animation: dimming 0.1s infinite;
+    filter: blur(0.04rem);
+    animation: dimming 0.1s infinite;
+  }
 }
 
 @keyframes dimming {
@@ -282,7 +297,7 @@ a:hover {
   padding-top: 1rem;
 
   font-family: "TeX";
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -309,15 +324,24 @@ a:hover {
   align-items: center;
 }
 
-.active #handle-icon,
-.accordion:hover #handle-icon {
+.active #handle-icon {
   fill: var(--color-light);
 }
 
-.active,
-.accordion:hover {
+.active {
   background-color: var(--color-accordionbg);
   color: var(--color-white);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .accordion:hover #handle-icon {
+    fill: var(--color-light);
+  }
+
+  .accordion:hover {
+    background-color: var(--color-accordionbg);
+    color: var(--color-white);
+  }
 }
 
 .accordion:after {
@@ -428,59 +452,6 @@ a:hover {
   align-items: flex-start;
   transition-property: transform, height;
 }
-/* 3D Effects */
-.swiper-container-3d {
-  perspective: 1200px;
-}
-.swiper-container-3d .swiper-wrapper,
-.swiper-container-3d .swiper-slide,
-.swiper-container-3d .swiper-slide-shadow-left,
-.swiper-container-3d .swiper-slide-shadow-right,
-.swiper-container-3d .swiper-slide-shadow-top,
-.swiper-container-3d .swiper-slide-shadow-bottom,
-.swiper-container-3d .swiper-cube-shadow {
-  transform-style: preserve-3d;
-}
-.swiper-container-3d .swiper-slide-shadow-left,
-.swiper-container-3d .swiper-slide-shadow-right,
-.swiper-container-3d .swiper-slide-shadow-top,
-.swiper-container-3d .swiper-slide-shadow-bottom {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 10;
-}
-.swiper-container-3d .swiper-slide-shadow-left {
-  background-image: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-}
-.swiper-container-3d .swiper-slide-shadow-right {
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-}
-.swiper-container-3d .swiper-slide-shadow-top {
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-}
-.swiper-container-3d .swiper-slide-shadow-bottom {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-}
 /* CSS Mode */
 .swiper-container-css-mode > .swiper-wrapper {
   overflow: auto;
@@ -516,10 +487,10 @@ a:hover {
   /* margin-top: calc(0px - (var(--swiper-navigation-size) / 2)); */
   z-index: 10;
   cursor: col-resize;
-  /* display: flex; */
+  display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  /* color: var(--swiper-navigation-color, var(--swiper-theme-color)); */
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -542,27 +513,27 @@ a:hover {
   left: 0;
   right: auto;
 }
-.swiper-button-prev:after,
+/* .swiper-button-prev:after,
 .swiper-container-rtl .swiper-button-next:after {
   content: "prev";
-}
+} */
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
   right: 0;
   left: auto;
 }
-.swiper-button-next:after,
+/* .swiper-button-next:after,
 .swiper-container-rtl .swiper-button-prev:after {
   content: "next";
-}
-.swiper-button-prev.swiper-button-white,
+} */
+/* .swiper-button-prev.swiper-button-white,
 .swiper-button-next.swiper-button-white {
   --swiper-navigation-color: #ffffff;
 }
 .swiper-button-prev.swiper-button-black,
 .swiper-button-next.swiper-button-black {
   --swiper-navigation-color: #000000;
-}
+} */
 .swiper-button-lock {
   display: none;
 }
@@ -952,7 +923,7 @@ button.swiper-pagination-bullet {
 
 @media only screen and (max-width: 1280px) {
   body {
-    margin: 1rem 2rem 4rem;
+    margin: 1rem 1rem 4rem;
   }
 
   .grid {
@@ -996,11 +967,15 @@ button.swiper-pagination-bullet {
 
   h1,
   .h1 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   h2,
   .h2 {
+    font-size: 1rem;
+  }
+
+  .social {
     font-size: 1rem;
   }
 
@@ -1013,9 +988,12 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 480px) {
   body {
+    margin: 1rem 0 3.5rem;
+
     font-size: 0.9rem;
+    letter-spacing: ;
   }
 
   #header {
@@ -1024,18 +1002,19 @@ button.swiper-pagination-bullet {
 
   h1,
   .h1 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
-  body {
-    margin: 1rem 0 3.5rem;
+  p {
+    letter-spacing: -0.04em;
+  }
+
+  .social {
+    padding-top: 0.5rem;
+    font-size: 0.9rem;
   }
 
   .arrow {
     width: 60%;
-  }
-
-  .link-arrow {
-    font-size: 1rem;
   }
 }

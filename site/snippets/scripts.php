@@ -10,6 +10,7 @@
     // List 1
     $('#items-1').sortable({
         group: 'list',
+        handle: '.handle',
         animation: 250,
         ghostClass: 'ghost',
         onSort: reportActivity,
@@ -18,6 +19,7 @@
     // List 2
     $('#items-2').sortable({
         group: 'list',
+        handle: '.handle',
         animation: 250,
         ghostClass: 'ghost',
         onSort: reportActivity,
@@ -95,28 +97,28 @@
 <!-- Swiper Options -->
 
 <script>
-      var swiper = new Swiper(".mySwiper", {
-        
-        lazy: {
-        //  tell swiper to load images before they appear
-        loadPrevNext: true,
-        // amount of images to load
-      	loadPrevNextAmount: 2,
-        checkInView: true,
-        },
+        var swiper = new Swiper(".mySwiper", {
 
-        
-        setWrapperSize: true,
-        autoHeight: true,
-        effect: 'fade',
-          fadeEffect: {
-            crossFade: true
-          },
-        slidesPerView: 1,
-        loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+            lazy: {
+                //  tell swiper to load images before they appear
+                loadPrevNext: true,
+                // amount of images to load
+                loadPrevNextAmount: 2,
+                checkInView: true,
+            },
+
+            setWrapperSize: true,
+            autoHeight: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                hideOnClick: false,
+            },
+        });
 </script>
