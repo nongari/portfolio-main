@@ -8,7 +8,7 @@
     <div class="panel top-panel">
         <h1><?= $page->text() ?></h1>
         <div class="social">
-            <a href="mailto: yong@yong-heekim.com">Email</a>
+            <a href="mailto: yongheekim.meta@gmail.com">Email</a>
             /
             <a href="https://www.instagram.com/yonghee____kim" target="_blank">Instagram</a>
             /

@@ -314,7 +314,7 @@ a,
 }
 
 .handle {
-  cursor: move;
+  cursor: grab;
   padding: 0 1rem;
 }
 
@@ -950,6 +950,10 @@ button.swiper-pagination-bullet {
     font-size: 0.875rem;
   }
 
+  .social {
+    font-size: 1rem;
+  }
+
   .top-panel {
     grid-column: span 7;
   }
@@ -982,10 +986,6 @@ button.swiper-pagination-bullet {
 
   p {
     font-size: 0.8rem;
-  }
-
-  .social {
-    font-size: 1rem;
   }
 
   #control {
