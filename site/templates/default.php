@@ -9,6 +9,7 @@
         <link rel="shortcut icon" type="image/png" href="assets\images\favicon.png">
 
         <?= css('\assets\css\index.css') ?>
+        <?= css('\assets\css\slick.css') ?>
 
 
     </head>
@@ -16,8 +17,7 @@
 <body>
 
     <?= snippet ('header') ?>
-    <?= snippet ('project-left') ?>
-    <?= snippet ('project-right') ?>
+    <?= snippet ('project') ?>
     <?= snippet ('scripts') ?>
 
 </body>

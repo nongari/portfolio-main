@@ -1,9 +1,7 @@
-<nav class="grid" id="header">
-    <h1 class="intro"><?= $page->h1() ?></h1>
+<nav class="container col-3" id="header">
     <div class="capsule">
-        <div>
-            <img class="arrow" src="assets\images\triangle-a.svg" alt="">
-        </div>
+        <h1><?= $page->h1() ?></h1>
+        <img class="arrow" src="assets\images\triangle-a.svg" alt="">
     </div>
     <div class="panel top-panel">
         <h1><?= $page->text() ?></h1>

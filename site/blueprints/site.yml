@@ -9,21 +9,13 @@ columns:
         type: pages
         headline: Drafts
         status: draft
-        templates:
-          - project-left
-          - project-right
 
-      project-left: sections/project-left
-
-      project-right: sections/project-right
+      project: sections/project
 
       unlisted:
         headline: Unlisted
         type: pages
         status: unlisted
-        templates:
-          - project-left
-          - project-right
 
   - width: 1/3
     sections:

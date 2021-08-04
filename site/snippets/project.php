@@ -1,10 +1,10 @@
 
 
-<div class="grid metalist">
+<div class="container grid" id="metalist">
     
-        <div id="items-1" class="col-4">
+        <div id="items-1s">
 
-        <?php foreach ($site->children()->template('project-left') as $project): ?>
+        <?php foreach ($site->children()->template('project') as $project): ?>
             
             <div id="<?= $project->title() ?>" class="list-group-item nested-1">
                 <div class="accordion light">
@@ -25,37 +25,19 @@
                 <div class="panel">
                     
                     <div class="panel-container">
-                        
 
                         <?php if ($project->multi()->toBool()): ?>
 
-                        <div class="swiper-container mySwiper">
-
-                            <div class="swiper-wrapper">
-
+                            <div class="carousel">
                                 <?php foreach($project->images() as $projectimages): ?>
 
-                                    <div class="swiper-slide">
-                                        <figure>
-                                            <img data-src="<?= $projectimages->url() ?>"  class="swiper-lazy" >
-                                        </figure>
-                                        
+                                    <div>
+                                        <img src="<?= $projectimages->url() ?>"  class="swiper-lazy" >
                                     </div>
 
-                                <?php endforeach ?> 
+                                <?php endforeach ?>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
 
-                        <?php endif ?>    
-                        
-                        <?php if ($project->single()->toBool()): ?>
-
-                            <?php foreach($project->images() as $projectimages): ?>
-                                <img class="single" src="<?= $projectimages->url() ?>" >
-                            <?php endforeach ?>
-                            
                         <?php endif ?>
 
                         <?php if ($project->videon()->toBool()): ?>
@@ -69,6 +51,8 @@
                         <?php endif ?>
 
                         <div class="description"><?= $project->text()->toBlocks() ?></div>
+
+                        
 
                     </div>
                 </div>

@@ -1,9 +1,9 @@
 type: pages
-headline: Project Right
+headline: Projects
 size: small
 info: "{{ page.images.count }} image(s)"
 layout: list
-template: project-right
+template: project
 empty: No albums yet
 status: listed
 image:

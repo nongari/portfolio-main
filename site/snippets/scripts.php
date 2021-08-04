@@ -1,7 +1,7 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src="https://unpkg.com/sortablejs-make/Sortable.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
 
 
   <script>
@@ -14,23 +14,6 @@
         animation: 10,
         ghostClass: 'ghost',
         onSort: reportActivity,
-    });
-
-    // List 2
-    $('#items-2').sortable({
-        group: 'list',
-        handle: '.handle',
-        animation: 10,
-        ghostClass: 'ghost',
-        onSort: reportActivity,
-    });
-
-    // Arrays of "data-id"
-    $('#get-order').click(function () {
-        var sort1 = $('#items-1').sortable('toArray');
-        console.log(sort1);
-        var sort2 = $('#items-2').sortable('toArray');
-        console.log(sort2);
     });
 
     // Report when the sort order has changed
@@ -92,33 +75,13 @@
   });
 </script>
 
-
-
-<!-- Swiper Options -->
-
 <script>
-        var swiper = new Swiper(".mySwiper", {
-
-            lazy: {
-                //  tell swiper to load images before they appear
-                loadPrevNext: true,
-                // amount of images to load
-                loadPrevNextAmount: 2,
-                checkInView: true,
-            },
-
-            setWrapperSize: true,
-            autoHeight: false,
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true
-            },
-            slidesPerView: 1,
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-                hideOnClick: false,
-            },
-        });
+  $('.carousel').slick({
+    draggable: true,
+    arrows: true,
+    fade: true,
+    infinite: true,
+    cssEase: 'ease-in-out',
+    touchThreshold: 100
+  })
 </script>
