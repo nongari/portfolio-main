@@ -108,7 +108,8 @@ p {
 
   font-size: 1rem;
   font-weight: 500;
-  letter-spacing: -0.05em;
+
+  letter-spacing: -0.06em;
 }
 
 figure {
@@ -324,7 +325,7 @@ a,
 }
 
 .description {
-  padding: 0.5rem 1rem;
+  padding: 1rem 0;
 }
 
 .single {
@@ -456,7 +457,7 @@ a,
   }
 
   p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   #control {
@@ -471,12 +472,6 @@ a,
 @media only screen and (max-width: 480px) {
   body {
     margin: 1rem 0 3.5rem;
-
-    font-size: 0.7rem;
-  }
-
-  #header {
-    padding: 0 1rem 1rem 1rem;
   }
 
   h1,
@@ -489,8 +484,17 @@ a,
     font-size: 0.95rem;
   }
 
+  .capsule,
+  .top-panel {
+    padding: 0 1rem;
+  }
+
   .social {
     padding-top: 0.5rem;
     font-size: 0.9rem;
+  }
+
+  .description {
+    padding: 0.5rem 1rem;
   }
 }

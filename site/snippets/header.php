@@ -1,4 +1,4 @@
-<nav class="container col-3" id="header">
+<nav id="header">
     <div class="capsule">
         <h1><?= $page->h1() ?></h1>
         <img class="arrow" src="assets\images\triangle-a.svg" alt="">

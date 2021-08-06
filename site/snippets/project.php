@@ -40,6 +40,14 @@
 
                         <?php endif ?>
 
+                        <?php if ($project->single()->toBool()): ?>
+
+                            <?php foreach($project->images() as $projectimages): ?>
+                                <img class="single" src="<?= $projectimages->url() ?>" >
+                            <?php endforeach ?>
+                            
+                        <?php endif ?>
+
                         <?php if ($project->videon()->toBool()): ?>
 
                             <?php foreach($project->videos() as $videos): ?>
